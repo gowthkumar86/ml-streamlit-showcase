@@ -5,8 +5,8 @@ st.set_page_config(page_title="ML Showcase", layout="wide")
 st.title("🚀 Machine Learning Streamlit Showcase")
 
 tab1, tab2, tab3 = st.tabs(["🧮 Accident Probability (Regression)",
-                            "💬 Sentiment Analysis",
-                            "🧠 Word Clustering"])
+                            "💬 Sentiment Analysis (In Progress)",
+                            "🧠 Word Clustering (In Progress)"])
 
 with tab1:
     motorcycle_utils.render_regression_tab()
