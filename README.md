@@ -71,7 +71,7 @@ Users enter the following details:
 
 ## 🧪 Model Training (Optional)
 
-If you're interested in training the model yourself, check out the `notebooks/` folder (if included) for Jupyter notebooks and training scripts.
+If you're interested in training the model yourself, check out the `utils/` folder (if included) for Jupyter notebooks and training scripts.
 
 ---
 
