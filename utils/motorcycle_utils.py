@@ -42,10 +42,20 @@ def render_regression_tab():
     })
 
     prediction = loaded_model.predict(input_data)
+    risk_percent = prediction[0] * 100
+
+    # Define color based on risk percentage
+    if risk_percent < 30:
+        color = '#2ecc71'  # Green
+    elif risk_percent < 70:
+        color = '#f1c40f'  # Yellow
+    else:
+        color = '#e74c3c'  # Red
+
     st.markdown(f"""
     <div style='background-color:#f0f8ff; padding:10px; border-radius:10px;'>
     <h2 style='color:#007acc;'>🚨 Your Motorcycle Risk Factor:</h2>
-    <h1 style='color:#d90429; font-weight:bold;'>{prediction[0]:.4f}</h1>
+    <h1 style='color:{color}; font-weight:bold;'>{risk_percent:.2f}%</h1>
     <p style='font-style: italic;'>Stay safe on the road!</p>
     </div>
     """, unsafe_allow_html=True)
