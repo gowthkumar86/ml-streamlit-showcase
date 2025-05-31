@@ -64,7 +64,7 @@ def render_regression_tab():
     st.markdown(f"""
     <div style='background-color:#f0f8ff; padding:10px; border-radius:10px;'>
     <h2 style='color:#007acc;'>🚨 Accident Risk Factor:</h2>
-    <h1 style='color:{color}; font-weight:bold;'>{risk_percent:.2f}%</h1>
+    <h1 style='color:{color}; font-weight:bold; text-align:center'>{risk_percent:.2f}%</h1>
     <p style='font-style: italic;'>Stay safe on the road!</p>
     </div>
     """, unsafe_allow_html=True)
