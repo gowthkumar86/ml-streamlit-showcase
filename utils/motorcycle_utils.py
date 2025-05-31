@@ -11,12 +11,10 @@ def render_regression_tab():
 
     loaded_model = load_model()
 
-    st.header("Predict Accident Probability")
-
     st.markdown("""
-    <div style='background-color:#e6f2ff; padding:15px; border-radius:10px; margin-bottom:20px;'>
-    <h2 style='color:#005b99;'>Motorcycle Risk Predictor</h2>
-    <p style='font-size:16px; color:#333;'>
+    <div style= padding:15px; border-radius:10px; margin-bottom:20px;'>
+    <h3>Motorcycle Risk Predictor</h2>
+    <p style='font-size:16px;'>
         This app estimates your motorcycle accident risk based on your riding habits, environment, 
         and safety factors. It leverages advanced machine learning models trained on extensive data 
         to help you make safer riding decisions. Input your ride details and get an instant, easy-to-understand risk score — helping you stay protected on every journey.
