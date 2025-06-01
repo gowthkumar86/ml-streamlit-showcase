@@ -15,7 +15,7 @@ def render_sentiment_analysis_tab():
 
     st.markdown("""
     <div style='padding:15px; border-radius:10px; margin-bottom:20px; background-color:#f9f9f9;'>
-        <h2>Sentiment Analysis</h2>
+        <h3>Sentiment Analysis</h3>
         <p style='font-size:16px;'>
             This application predicts the sentiment of product reviews using a Logistic Regression model trained on 
             <a href='https://www.kaggle.com/datasets/niraliivaghani/flipkart-product-customer-reviews-dataset' target='_blank'>200,000+ Flipkart product reviews</a>.
