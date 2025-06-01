@@ -15,7 +15,7 @@ def render_sentiment_analysis_tab():
 
     st.markdown("""
     <div style='padding:15px; border-radius:10px; margin-bottom:20px; background-color:#f9f9f9;'>
-        <h2>Sentiment Analysis App</h2>
+        <h2>Sentiment Analysis</h2>
         <p style='font-size:16px;'>
             This application predicts the sentiment of product reviews using a Logistic Regression model trained on 
             <a href='https://www.kaggle.com/datasets/niraliivaghani/flipkart-product-customer-reviews-dataset' target='_blank'>200,000+ Flipkart product reviews</a>.
@@ -26,13 +26,16 @@ def render_sentiment_analysis_tab():
             <strong>92% accuracy</strong> on the test dataset.
         </p>
         <p style='font-size:16px;'>
-            Enter a product review below to instantly see the predicted sentiment along with a visual confidence score.
+            Users provide:
+            <li> Product or service review text </li>
+            <li> Customer feedback </li>
+            <li> Any short to medium-length textual data for sentiment evaluation </li>
         </p>
     </div>
     """, unsafe_allow_html=True)
 
     
-    review = st.text_area("Enter a product review:", "Samsung Galaxy S23 Ultra is a great phone with amazing camera quality and performance.", height=150)
+    review = st.text_area("Enter the Review:", "Samsung Galaxy S23 Ultra is a great phone with amazing camera quality and performance.", height=150)
 
     if st.button("Predict Sentiment"):
         # Predict sentiment
