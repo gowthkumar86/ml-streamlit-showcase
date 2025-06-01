@@ -3,7 +3,7 @@
 **Web application to estimate the accident risk for motorcycle riders using machine learning.**
 This app considers various safety and environmental factors to provide a risk score that helps users make safer riding decisions.
 
----
+
 
 ## Features
 
@@ -18,7 +18,7 @@ This app considers various safety and environmental factors to provide a risk sc
 * Responsive and user-friendly design
 * Includes model caching for fast performance
 
----
+
 
 ## Input Parameters
 
@@ -36,7 +36,7 @@ Users enter the following details:
 * Weather condition
 * Road type
 
----
+
 
 ## How It Works
 
@@ -46,16 +46,12 @@ Users enter the following details:
 
 ---
 
-Got it! You want to adapt this description for a **Sentiment Analysis** Streamlit app instead of the Motorcycle Risk Predictor. Here's a polished and forward-thinking update of your README or app description for a sentiment analysis tool — keeping it clear, engaging, and aligned with your style:
-
----
-
 # Sentiment Analysis Predictor
 
 **Web application to analyze sentiment from user reviews or text inputs using a trained classification model.**
 This app helps users quickly understand the emotional tone behind texts, enabling smarter business and product decisions.
 
----
+
 
 ## Features
 
@@ -75,7 +71,7 @@ This app helps users quickly understand the emotional tone behind texts, enablin
 
 * Responsive, user-friendly design with fast predictions and caching support
 
----
+
 
 ## Input Parameters
 
@@ -85,7 +81,7 @@ Users provide:
 * Customer feedback
 * Any short to medium-length textual data for sentiment evaluation
 
----
+
 
 ## How It Works
 
@@ -96,7 +92,7 @@ Users provide:
    * The predicted sentiment with color-coded styling
    * Confidence scores for each sentiment class via a horizontal bar chart
 
----
+
 
 ## Why Use This App?
 
@@ -104,4 +100,4 @@ Users provide:
 * Make data-driven decisions in marketing, product development, and customer service
 * Automate sentiment extraction without manual analysis
 
-
+---
