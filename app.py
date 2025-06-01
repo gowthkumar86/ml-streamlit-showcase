@@ -1,12 +1,13 @@
 import streamlit as st
-from utils import motorcycle_utils, sentiment_analysis_utils
+from utils import motorcycle_utils, sentiment_analysis_utils, wikipedia_topic_clusterer_utils
 
 st.set_page_config(page_title="ML Showcase", layout="wide")
-st.title("🚀 Machine Learning Streamlit Showcase")
+st.markdown("<h2>Machine Learning Streamlit Showcase</h2>", unsafe_allow_html=True)
+
 
 tab1, tab2, tab3 = st.tabs(["🧮 Accident Probability (Regression)",
                             "💬 Sentiment Analysis (Classification)",
-                            "🧠 Word Clustering (In Development)"])
+                            "🧠 Wikipedia Topic Clusterer (Clustering)"])
 
 with tab1:
     motorcycle_utils.render_regression_tab()
@@ -14,5 +15,5 @@ with tab1:
 with tab2:
     sentiment_analysis_utils.render_sentiment_analysis_tab()
 
-# with tab3:
-#     clustering_utils.render_clustering_tab()
+with tab3:
+    wikipedia_topic_clusterer_utils.render_wikipedia_topic_clusterer_tab()

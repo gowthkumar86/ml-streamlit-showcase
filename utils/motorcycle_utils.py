@@ -13,7 +13,7 @@ def render_regression_tab():
 
     st.markdown("""
     <div style='padding:15px; border-radius:10px; margin-bottom:20px; background-color:#f9f9f9;'>
-    <h2>Motorcycle Risk Predictor</h2>
+    <h3>Motorcycle Risk Predictor</h3>
     <p style='font-size:16px;'>
         This app estimates your motorcycle accident risk based on your riding habits, environment, 
         and safety factors. It leverages XGBoost machine learning model trained on extensive data 
