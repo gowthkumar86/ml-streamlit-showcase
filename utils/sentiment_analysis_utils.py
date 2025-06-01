@@ -7,7 +7,7 @@ import plotly.express as px
 def render_sentiment_analysis_tab():
     @st.cache_resource
     def load_model():
-        with open("models\sentiment_predictor.pkl", "rb") as f:
+        with open("models/sentiment_predictor.pkl", "rb") as f:
             model = joblib.load(f)
         return model
 
