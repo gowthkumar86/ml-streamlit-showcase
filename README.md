@@ -1,6 +1,6 @@
 # Motorcycle Risk Predictor
 
-**A Streamlit web application to estimate the accident risk for motorcycle riders using machine learning.**
+**Web application to estimate the accident risk for motorcycle riders using machine learning.**
 This app considers various safety and environmental factors to provide a risk score that helps users make safer riding decisions.
 
 ---
@@ -46,37 +46,62 @@ Users enter the following details:
 
 ---
 
-## Setup Instructions
-
-1. **Clone the repository:**
-
-   ```bash
-   git clone https://github.com/gowthkumar86/ml-streamlit-showcase.git
-   ```
-
-2. **Install dependencies:**
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. **Run the app:**
-
-   ```bash
-   streamlit run app.py
-   ```
-
+Got it! You want to adapt this description for a **Sentiment Analysis** Streamlit app instead of the Motorcycle Risk Predictor. Here's a polished and forward-thinking update of your README or app description for a sentiment analysis tool — keeping it clear, engaging, and aligned with your style:
 
 ---
 
-## 🧪 Model Training (Optional)
+# Sentiment Analysis Predictor
 
-If you're interested in training the model yourself, check out the `utils/` folder (if included) for Jupyter notebooks and training scripts.
+**Web application to analyze sentiment from user reviews or text inputs using a trained classification model.**
+This app helps users quickly understand the emotional tone behind texts, enabling smarter business and product decisions.
 
 ---
 
-## 🙌 Acknowledgements
+## Features
 
-* Built using [Streamlit](https://streamlit.io)
-* Model trained using scikit-learn and pandas
-* Inspired by real-world road safety analysis
+* Predicts sentiment category (Positive, Neutral, Negative) from text input
+
+* Built using a robust trained classification model
+
+* Clean, interactive Streamlit interface
+
+* Color-coded sentiment levels:
+
+  * ✅ **Positive** (Green)
+  * ⚪ **Neutral** (Gray)
+  * 🔴 **Negative** (Red)
+
+* Displays confidence scores with intuitive horizontal bar charts
+
+* Responsive, user-friendly design with fast predictions and caching support
+
+---
+
+## Input Parameters
+
+Users provide:
+
+* Product or service review text
+* Customer feedback
+* Any short to medium-length textual data for sentiment evaluation
+
+---
+
+## How It Works
+
+1. The user enters or pastes their text input.
+2. The text is processed and sent to the pre-trained sentiment analysis model (`sentiment_predictor.pkl`).
+3. The app predicts the sentiment category and displays:
+
+   * The predicted sentiment with color-coded styling
+   * Confidence scores for each sentiment class via a horizontal bar chart
+
+---
+
+## Why Use This App?
+
+* Gain instant insights into customer opinions and market sentiment
+* Make data-driven decisions in marketing, product development, and customer service
+* Automate sentiment extraction without manual analysis
+
+
