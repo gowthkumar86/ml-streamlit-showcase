@@ -32,30 +32,31 @@ def render_wikipedia_topic_clusterer_tab():
     title_input = st.text_input("Enter Wikipedia Article Title:","Hierarchical clustering")
 
     if st.button("Fetch Wikipedia Article"):
-        if title_input:
-            url = f"https://en.wikipedia.org/wiki/{title_input.replace(' ', '_')}"
-            response = requests.get(url)
-            if response.status_code == 200:
-                soup = BeautifulSoup(response.content, 'html.parser')
-                main_content = clean_main_content(soup)
-                if main_content:
-                    cleaned_text = clean_wikipedia_text(main_content.get_text(separator="\n", strip=True))
-                    sentences = split_sentences(cleaned_text)
-                    clusters = hierarchical_cluster_sentences(sentences)
-                    df = format_clusters_as_df(clusters)
+        with st.spinner("Wait for it...", show_time=True):
+            if title_input:
+                url = f"https://en.wikipedia.org/wiki/{title_input.replace(' ', '_')}"
+                response = requests.get(url)
+                if response.status_code == 200:
+                    soup = BeautifulSoup(response.content, 'html.parser')
+                    main_content = clean_main_content(soup)
+                    if main_content:
+                        cleaned_text = clean_wikipedia_text(main_content.get_text(separator="\n", strip=True))
+                        sentences = split_sentences(cleaned_text)
+                        clusters = hierarchical_cluster_sentences(sentences)
+                        df = format_clusters_as_df(clusters)
 
-                    st.subheader("Clustered Topics")
-                    st.markdown(f"**Number of Clusters:** {len(clusters)}")
+                        st.subheader("Clustered Topics")
+                        st.markdown(f"**Number of Clusters:** {len(clusters)}")
 
-                    for cluster_title, sents in clusters.items():
-                        with st.expander(f"{cluster_title} ({len(sents)} sentences)"):
-                            for sent in sents:
-                                st.write(f"- {sent}")
-                    
-                    st.subheader("Clusters DataFrame")
-                    st.dataframe(df) 
-            else:
-                st.error(response.status_code)
+                        for cluster_title, sents in clusters.items():
+                            with st.expander(f"{cluster_title} ({len(sents)} sentences)"):
+                                for sent in sents:
+                                    st.write(f"- {sent}")
+                        
+                        st.subheader("Clusters DataFrame")
+                        st.dataframe(df) 
+                else:
+                    st.error(response.status_code)
 
 
 
