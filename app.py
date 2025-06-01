@@ -1,18 +1,18 @@
 import streamlit as st
-from utils import motorcycle_utils
+from utils import motorcycle_utils, sentiment_analysis_utils
 
 st.set_page_config(page_title="ML Showcase", layout="wide")
 st.title("🚀 Machine Learning Streamlit Showcase")
 
 tab1, tab2, tab3 = st.tabs(["🧮 Accident Probability (Regression)",
-                            "💬 Sentiment Analysis (In Progress)",
-                            "🧠 Word Clustering (In Progress)"])
+                            "💬 Sentiment Analysis (Classification)",
+                            "🧠 Word Clustering (In Development)"])
 
 with tab1:
     motorcycle_utils.render_regression_tab()
 
-# with tab2:
-#     sentiment_utils.render_sentiment_tab()
+with tab2:
+    sentiment_analysis_utils.render_sentiment_analysis_tab()
 
 # with tab3:
 #     clustering_utils.render_clustering_tab()
