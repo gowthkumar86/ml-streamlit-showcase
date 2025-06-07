@@ -1,3 +1,5 @@
+import os
+os.environ["STREAMLIT_WATCHER_IGNORE"] = "torch"
 import streamlit as st
 from utils import motorcycle_utils, sentiment_analysis_utils, wikipedia_topic_clusterer_utils
 
